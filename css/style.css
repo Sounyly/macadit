@@ -1,0 +1,102 @@
+.m50
+{
+	margin-top: 50px;
+}
+.border
+{
+	border: 2px red solid;
+}
+/*------------------------------------------
+  navbar
+--------------------------------------------*/
+	nav.navbar
+	{
+		background: #303840;
+		margin-bottom: 150px;
+		border: 0;
+		font-size: 16px;
+	}
+
+	img.logo
+	{
+		margin-top: -15px;
+	}
+	a.active
+	{
+		background-color: transparent;
+	}
+	a.navbar-brand
+	{
+		background: #e7480f;
+		width: 90px;
+	}
+
+
+/*------------------------------------------
+  general
+--------------------------------------------*/
+	#page
+	{
+		margin-top: 70px;
+		
+	}
+	.content
+	{
+		border: 1px #90908F solid;
+		background: #FFFFFF;
+		box-shadow: 0px 1px 15px #90908F;
+		border-radius: 3px;
+		padding: 20px;
+		text-align: justify;
+	}
+	aside.aside-principal
+	{
+		border-left: 1px #90908F solid;
+		padding-left: 20px;
+	}
+	img.icon-logiciel
+	{
+		display: inline-block;
+		width: 150px;
+	}
+	.articles-logiciel
+	{
+		border: 2px blue solid;
+		display: flex;
+		align-items: center;
+	}
+	span.date-poste
+	{
+		color: #B0ACAC;
+		font-style: italic;
+		font-size: 12px;
+	}
+	span.nbr-comment
+	{
+		color: #B0ACAC;
+		font-style: italic;
+		font-size: 12px;
+	}
+/*------------------------------------------
+  index
+--------------------------------------------*/
+	.tag
+	{
+		border-radius: 5px;
+		width: 40px;
+		height: 17px;
+		background: #e7480f;
+		margin-bottom: 10px;
+	}
+
+/*------------------------------------------
+  Footer
+--------------------------------------------*/
+	#footer
+	{
+		position: fixed;
+		bottom: 0;
+		height: 80px;
+		width: 100%;
+		background: #303840;
+	}

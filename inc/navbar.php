@@ -12,7 +12,10 @@
         <!-- Top Menu Items -->
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href=""><!--<img src="/macadit/img/logo.png" alt="Logo Mac a dit" class="logo">--></a>
+                <a class="navbar-brand" href="">
+                <!--<img src="/macadit/img/logo.png" alt="Logo Mac a dit" class="logo">-->
+                  <!--<img src="img/header.png" alt="Logo Mac a dit" class="logo">-->
+                </a>
             </div>
             <ul class="nav navbar-nav">
               <li><a href="/macadit/index.php" class="active">Accueil</a></li>

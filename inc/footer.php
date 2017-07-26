@@ -1,8 +1,8 @@
-</div><!-- fin div index -->
 
-<div id="footer" class="container-fluid">
+
+<footer id="footer" class="container-fluid">
 	
-</div>
+</footer>
 
 
 </body>

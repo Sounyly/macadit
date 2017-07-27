@@ -1,28 +1,25 @@
 <?php 
-require 'admin/database.php';
-require 'func/checkInput.php';
-include 'inc/header.php'; ?>
+	include '../admin/database.php';
+	include '../inc/header.php';
+ ?>
 
-<body>
+ <body>
 <div class="container-fluid">
-	<?php include 'inc/navbar.php'; ?>
+	<?php include '../inc/navbar.php'; ?>
 
 	<div class="row header-index">
-	<div class="container">
-			<div class="col-lg-12">
-			<h1 class="texte-header">Mac a dit!</h1>
-				<br>
-				<p class="p-header">Le site des passionnés et des futurs passionnés d'Apple!</p>
-			</div>
-			</div>
-			
-		</div><!-- fin row -->
+		<div class="container">
+				<div class="col-lg-12">
+				<h1 class="texte-header">Mac a dit!</h1>
+				</div>
+		</div>
+	</div><!-- fin row -->
 
 	
 	<div class="container" id ="page">
 		
 	
-	<h3 class="">Les derniers articles parus.</h3><br>
+	<h2 class="">Les logiciels mac0S.</h2><br>
 	<!--______________________________________________
 	CONTAINER principal
 	Accueil avec listes des derniers articles parus
@@ -31,7 +28,7 @@ include 'inc/header.php'; ?>
 			<div class="col-lg-9"><!-- les derniers articles -->
 			
 				<div class="row articles-logiciel">
-					<div class="col-lg-3"><img src="img/logiciel/wunderlist.png" class="icon-logiciel" alt=""></div>
+					<div class="col-lg-3"><img src="../img/logiciel/wunderlist.png" class="icon-logiciel" alt=""></div>
 					<div class="col-lg-9">
 						<h3>Wunderlist</h3>
 						<span class="date-poste">Posté le 26 juil 2017</span><br>
@@ -46,30 +43,14 @@ include 'inc/header.php'; ?>
 					</div><!-- fin col-lg-9 -->
 				</div><!-- fin articles-logiciel -->
 				<hr>
-				<div class="row articles-logiciel">
-					<div class="col-lg-3"><img src="img/debutant/bulle_2.png" class="icon-logiciel" alt=""></div>
-					<div class="col-lg-9">
-						<h3>Le Finder</h3>
-						<span class="date-poste">Posté le 26 juil 2017</span><br>
-						<span class="nbr-comment">0 Commentaires</span>
-						<br><br>
-							<p>Alors qu’est-ce que c’est le finder? à̀ quoi ça sert vraiment? Comment ça fonctionne?!
-							C’est l’élément central de l’interface du Macintosh bien connu des utililisateurs Apple. Il permet de naviguer dans tous vos dossiers et fichiers...</p><br>
-						<div class="row">
-							<div class="col-lg-12 span-detail">
-								<a href="#"><span class="">Détails </span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
-							</div>
-						</div><!-- fin row -->
-					</div><!-- fin col-lg-9 -->
-				</div><!-- fin articles-logiciel -->
-				<hr>
-			</div>
+				
+			</div><!-- fin col-lg-9 -->
 <!--___________________________________________
 	SIDEBAR des category
 	__________________________________________-->
 			<div class="col-lg-3"><!-- tag des category -->
 				<aside class="aside-principal">
-					<h2>Tags Categories</h2>
+					<h2>Tags des genres</h2>
 					<div class="row">
 						<div class="col-lg-12">
 							<div class="row">
@@ -98,4 +79,4 @@ include 'inc/header.php'; ?>
 	</div><!-- fin #page-->
 	</div>
 
-	<?php include 'inc/footer.php'; ?><!-- fin container fluid dans footer -->
+	<?php include '../inc/footer.php'; ?><!-- fin container fluid dans footer -->

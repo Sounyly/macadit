@@ -21,7 +21,7 @@
               <li><a href="/macadit/index.php" class="active">Accueil</a></li>
               <li><a href="/macadit/tutos/debuter.php">Débuter</a></li>
               <li><a href="#">Tutoriels</a></li>
-              <li><a href="#">Logiciels</a></li>
+              <li><a href="/macadit/logiciels/logiciel.php">Logiciels</a></li>
               <li><a href="#">Accessoires</a></li>
               <li><a href="#">IOS</a></li>
             </ul>

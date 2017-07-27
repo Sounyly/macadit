@@ -143,7 +143,7 @@ body
 --------------------------------------------*/
 	#footer
 	{
-		position: fixed;
+		/*position: fixed; pour que le footer soit toujours visible*/
 		bottom: 0;
 		height: 80px;
 		width: 100%;

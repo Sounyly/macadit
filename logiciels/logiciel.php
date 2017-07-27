@@ -1,5 +1,5 @@
 <?php 
-	include '../admin/database.php';
+	include '../class/database.php';
 	include '../inc/header.php';
  ?>
 

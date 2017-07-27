@@ -1,5 +1,5 @@
 <?php 
-require 'admin/database.php';
+require 'class/database.php';
 require 'func/checkInput.php';
 include 'inc/header.php'; ?>
 

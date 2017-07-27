@@ -31,6 +31,7 @@ include 'inc/header.php'; ?>
 			<div class="col-lg-9"><!-- les derniers articles -->
 			
 				<div class="row articles-logiciel">
+				
 					<div class="col-lg-3"><img src="img/logiciel/wunderlist.png" class="icon-logiciel" alt=""></div>
 					<div class="col-lg-9">
 						<h3>Wunderlist</h3>

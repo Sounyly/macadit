@@ -1,12 +1,18 @@
 <?php 
 	class LogicielManager
 	{
+<<<<<<< HEAD
 		private $_db;
 
 		public function __construct($db)
 		{
 			$this->setDb($db);
 		}
+=======
+		
+
+		
+>>>>>>> pdoTest
 		public function add(Logiciel $logiciel)
 		{
 			$req = $this->_db->prepare('
@@ -77,9 +83,15 @@
 			$req->execute();
 		}
 
+<<<<<<< HEAD
 		public function setDb(Database $db)
 		{
 			$this->_db = $db
+=======
+		public function setDb(PDO $db)
+		{
+			$this->_db = $db;
+>>>>>>> pdoTest
 			// $db = Database::connect();
 			// Database::disconnect();
 		}

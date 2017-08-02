@@ -5,13 +5,12 @@
 	require 'database.php';
 	require '../func/checkInput.php';
 
-	$nameError = $categoryError = $contenuError = $osError = $linkError = $imgError = $name = $category = $contenu = $os = $link = $img = "";
+	$nameError = $categoryError =  $osError = $marque$linkError = $imgError = $name = $category =  $os = $link = $img = "";
 
 	if(!empty($_POST))
 	{
 		$name = checkInput($_POST['name']);
 		$category = checkInput($_POST['category']);
-		$contenu = checkInput($_POST['contenu']);
 		$os = checkInput($_POST['os']);
 		$link = checkInput($_POST['link_download']);
 		$img = checkInput($_FILES['img']['name']);
@@ -29,11 +28,7 @@
 	    	$categoryError = 'Ce champ ne peut pas être vide';
             $isSuccess = false;
 	    }
-	    if(empty($contenu))
-	    {
-	    	$contenuError = 'Ce champ ne peut pas être vide';
-            $isSuccess = false;
-	    }
+	 
 	    if(empty($os))
 	    {
 	    	$osError = 'Ce champ ne peut pas être vide';

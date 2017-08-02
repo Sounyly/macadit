@@ -7,7 +7,7 @@ include 'inc/header.php'; ?>
 <div class="container-fluid">
 	<?php include 'inc/navbar.php'; ?>
 
-	<div class="row header-index">
+	<div class="row header">
 	<div class="container">
 			<div class="col-lg-12">
 			<h1 class="texte-header">Mac a dit!</h1>
@@ -31,6 +31,7 @@ include 'inc/header.php'; ?>
 			<div class="col-lg-9"><!-- les derniers articles -->
 			
 				<div class="row articles-logiciel">
+				
 					<div class="col-lg-3"><img src="img/logiciel/wunderlist.png" class="icon-logiciel" alt=""></div>
 					<div class="col-lg-9">
 						<h3>Wunderlist</h3>

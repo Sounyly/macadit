@@ -1,6 +1,7 @@
 <?php 
 	include '../class/database.php';
 	include '../class/logiciel.php';
+	include '../class/logiciel_manager.php';
 	include '../inc/header.php';
  ?>
 
@@ -8,9 +9,10 @@
 <div class="container-fluid">
 	<?php include '../inc/navbar.php'; ?>
 
-	<div class="row header-index">
+	<div class="row header">
 		<div class="container">
 				<div class="col-lg-12">
+				<img src="/macadit/img/macky-logo.png" alt="Logo du robot Macky" class="logo-macky">
 				<h1 class="texte-header">Mac a dit!</h1>
 				</div>
 		</div>
@@ -35,10 +37,13 @@
 					SELECT id, name, category, genre, os, lien_article, img, date_ajout 
 					FROM logiciel');
 
+				Database::disconnect();
 				// Chaque entrée sera récupérée et placée dans un array.
-				while($donnees = $statement->fetch(PDO::FETCH_ASSOC))
+				while($donnees = $statement->fetch())
 				{
+					$db = Database::connect();
 					$logiciel = new Logiciel($donnees);
+					
 
 					echo '<div class="row articles-logiciel">
 							<div class="col-lg-3"><img src="/macadit/img/',$logiciel->img(),'" class="icon-logiciel" alt=""></div>
@@ -51,7 +56,6 @@
 				}
 
 
-				Database::disconnect();
 				 ?>
 			
 

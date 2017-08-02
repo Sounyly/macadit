@@ -1,5 +1,5 @@
 <?php 
-require 'admin/database.php';
+require 'class/database.php';
 require 'func/checkInput.php';
 include 'inc/header.php'; ?>
 
@@ -7,7 +7,7 @@ include 'inc/header.php'; ?>
 <div class="container-fluid">
 	<?php include 'inc/navbar.php'; ?>
 
-	<div class="row header-index">
+	<div class="row header">
 	<div class="container">
 			<div class="col-lg-12">
 			<h1 class="texte-header">Mac a dit!</h1>

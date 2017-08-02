@@ -1,12 +1,9 @@
 <?php 
 	class LogicielManager
 	{
-		private $_db;
+		
 
-		public function __construct($db)
-		{
-			$this->setDb($db);
-		}
+		
 		public function add(Logiciel $logiciel)
 		{
 			$req = $this->_db->prepare('
@@ -77,9 +74,9 @@
 			$req->execute();
 		}
 
-		public function setDb(Database $db)
+		public function setDb(PDO $db)
 		{
-			$this->_db = $db
+			$this->_db = $db;
 			// $db = Database::connect();
 			// Database::disconnect();
 		}

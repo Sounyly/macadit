@@ -1,7 +1,5 @@
 <?php 
-	include '../class/database.php';
-	include '../class/logiciel.php';
-	include '../class/logiciel_manager.php';
+	
 	include '../inc/header.php';
  ?>
 
@@ -30,43 +28,16 @@
 		<div class="row content">
 			<div class="col-lg-9"><!-- les derniers articles -->
 			
-				<?php 
+				
 
-				$db = Database::connect(); 
-				$statement = $db->query('
-					SELECT id, name, category, genre, os, lien_article, img, date_ajout 
-					FROM logiciel');
-
-				Database::disconnect();
-				// Chaque entrée sera récupérée et placée dans un array.
-				while($donnees = $statement->fetch())
-				{
-					$db = Database::connect();
-					$logiciel = new Logiciel($donnees);
-					
-
-					echo '<div class="row articles-logiciel">
-							<div class="col-lg-3"><img src="/macadit/img/',$logiciel->img(),'" class="icon-logiciel" alt=""></div>
-							<div class="col-lg-9">
-							<h3>',$logiciel->name(),'</h3>
-							<span class="date-poste">',$logiciel->date_ajout(),'</span><br>
-							<span class="nbr-comment">0 Commentaires</span><br><br>
-							<p>',$logiciel->lien_article(),'</p><br>
-							';
-				}
-
-
-				 ?>
-			
-
-				<!--<div class="row articles-logiciel">
+				<div class="row articles-logiciel">
 					<div class="col-lg-3"><img src="../img/logiciel/wunderlist.png" class="icon-logiciel" alt=""></div>
 					<div class="col-lg-9">
 						<h3>Wunderlist</h3>
 						<span class="date-poste">Posté le 26 juil 2017</span><br>
 						<span class="nbr-comment">0 Commentaires</span>
 						<br><br>
-							<p>Gestionnaire de tâches très complet multi plates-formes, Wunderlist pour permetant de mener à bien vos projets, en collaborant avec vos collaborateurs.</p><br>-->
+							<p>Gestionnaire de tâches très complet multi plates-formes, Wunderlist pour permetant de mener à bien vos projets, en collaborant avec vos collaborateurs.</p><br>
 						<div class="row">
 							<div class="col-lg-12 span-detail">
 								<a href="#"><span class="">Détails </span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>

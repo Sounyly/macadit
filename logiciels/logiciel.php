@@ -3,7 +3,7 @@
 	include '../inc/header.php';
  ?>
 
- <body>
+
 <div class="container-fluid">
 	<?php include '../inc/navbar.php'; ?>
 

@@ -15,7 +15,7 @@
                 <li><a href="/macadit/tutos/debuter.php">Débuter</a></li>
                 <li><a href="#">Tutoriels</a></li>
                 <li><a href="/macadit/logiciels/logiciel.php">Logiciels</a></li>
-                <li><a href="#">Accessoires</a></li>
+                <li><a href="/macadit/accessoires/accessoire.php">Accessoires</a></li>
                 <li><a href="#">IOS</a></li>
               </ul>
             <form class="navbar-form navbar-right">

@@ -11,12 +11,24 @@
   	<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
   	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+     <script src="http://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/342ca52ed4.js"></script><!-- mon propre code font awesome -->
+  <!-- editeur de texte -->
+    <script type="text/javascript" src="/macadit/cleditor/jquery.cleditor.min.js"></script>
+     <link rel="stylesheet" type="text/css" href="/macadit/cleditor/jquery.cleditor.css" />
+     <!-- fonction  JQuery qui transforme le textarea en éditeur HTML -->
+     <script type="text/javascript">      
+      $(document).ready(function() {  $("#inputEditeur").cleditor();  });  
+      </script>
+  <!--  -->
+  
+
   	<link href="https://fonts.googleapis.com/css?family=Bubbler+One" rel="stylesheet"> 
   	 <link href="https://fonts.googleapis.com/css?family=Holtwood+One+SC" rel="stylesheet"> 
      <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
 
     <link rel="stylesheet" href="/macadit/css/style.css">
+    
 </head>
 
 <body>

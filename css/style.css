@@ -42,7 +42,19 @@ body
 		justify-content: center;
 		align-items: center;
 	}
-
+/*------------------------------------------
+  page view accessoire
+--------------------------------------------*/
+	.admin
+	{
+	    background: #fff;
+	    padding: 50px;
+	    border-radius: 10px;
+	}
+	.help-inline
+	{
+	    color: red;
+	}
 
 /*------------------------------------------
   general
@@ -147,6 +159,17 @@ body
 	{
 		display: inline-block;
 		width: 35%;
+	}
+/*------------------------------------------
+  Editeur de text WYSIWYG
+--------------------------------------------*/
+	#editeur
+	{
+    width: 500px; /* La largeur de l'éditeur*/
+    height: 200px; /* La hauteur de l'éditeur*/
+    border: 1px solid black; /* Une bordure pour bien voir l'éditeur*/
+    padding: 5px; /* Une petite marge intérieure*/
+    overflow: auto; /* Cette propriété sert à envoyer le texte à la ligne au cas où il dépasse la largeur définie avant*/
 	}
 /*------------------------------------------
   Footer

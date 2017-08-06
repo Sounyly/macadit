@@ -3,7 +3,7 @@ require 'class/database.php';
 require 'func/checkInput.php';
 include 'inc/header.php'; ?>
 
-<body>
+
 <div class="container-fluid">
 	<?php include 'inc/navbar.php'; ?>
 

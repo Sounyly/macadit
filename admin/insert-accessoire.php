@@ -4,115 +4,113 @@ require '../func/checkInput.php';
 $nameError = $categoryError =  $osError = $marqueError = $connexionError = $articleError = $imgError = $shopError = $tarifError = $name = $category =  $os = $marque = $connexion = $article = $img = $shop = $tarif = "";
 if(!empty($_POST))
 {
-	$name = checkInput($_POST['name']);
-	$category = checkInput($_POST['category']);
-	$os = checkInput($_POST['os']);
-	$marque = checkInput($_POST['marque']);
-	$connexion = checkInput($_POST['connexion']);
+    $name = checkInput($_POST['name']);
+    $category = checkInput($_POST['category']);
+    $os = checkInput($_POST['os']);
+    $marque = checkInput($_POST['marque']);
+    $connexion = checkInput($_POST['connexion']);
     $article = checkInput($_POST['article']);
-	
-	/*img de l'accessoire*/
-	$img = checkInput($_FILES['img']['name']);
-	$imgPath        = '../img/accessoires/'. basename($img);
-	$imgExtension   = pathinfo($imgPath,PATHINFO_EXTENSION);
-	/*lien vers le site du constructeur*/
-	$shop = checkInput($_POST['shop']);
+    
+    /*img de l'accessoire*/
+    $img = checkInput($_FILES['img']['name']);
+    $imgPath        = '../img/accessoires/'. basename($img);
+    $imgExtension   = pathinfo($imgPath,PATHINFO_EXTENSION);
+    /*lien vers le site du constructeur*/
+    $shop = checkInput($_POST['shop']);
     $tarif = checkInput($_POST['tarif']);
-
-	$isSuccess        = true;
-	$isUploadSuccess  = false;
+    $isSuccess        = true;
+    $isUploadSuccess  = false;
 /*--------NAME--------*/
-	if(empty($name))
-	{
-		$nameError = 'Ce champ ne peut pas être vide';
-		$isSuccess = false;
-	}
+    if(empty($name))
+    {
+        $nameError = 'Ce champ ne peut pas être vide';
+        $isSuccess = false;
+    }
 /*--------CATEGORY--------*/
-	if(empty($category))
-	{
-		$categoryError = 'Ce champ ne peut pas être vide';
-		$isSuccess = false;
-	}
+    if(empty($category))
+    {
+        $categoryError = 'Ce champ ne peut pas être vide';
+        $isSuccess = false;
+    }
 /*--------OS--------*/
-	if(empty($os))
-	{
-		$osError = 'Ce champ ne peut pas être vide';
-		$isSuccess = false;
-	}
+    if(empty($os))
+    {
+        $osError = 'Ce champ ne peut pas être vide';
+        $isSuccess = false;
+    }
 /*--------MARQUE--------*/
-	if(empty($marque))
-	{
-		$marqueError = 'Ce champ ne peut pas être vide';
-		$isSuccess = false;
-	}
+    if(empty($marque))
+    {
+        $marqueError = 'Ce champ ne peut pas être vide';
+        $isSuccess = false;
+    }
 /*--------CONNEXION--------*/ 
-	if(empty($connexion))
-	{
-		$connexionError = 'Ce champ ne peut pas être vide';
-		$isSuccess = false;
-	}
+    if(empty($connexion))
+    {
+        $connexionError = 'Ce champ ne peut pas être vide';
+        $isSuccess = false;
+    }
 /*--------CONTENU--------*/
-	if(empty($article))
-	{
-		$articleError = 'Ce champ ne peut pas être vide';
-		$isSuccess = false;
-	}
-	
+    if(empty($article))
+    {
+        $articleError = 'Ce champ ne peut pas être vide';
+        $isSuccess = false;
+    }
+    
 /*-----IMAGE--------*/
-	if(empty($img))
-	{
-		$imgError = 'Ce champ ne peut pas être vide';
-		$isSuccess = false;
-	}
-	else
-	{
-		$isUploadSuccess = true;
-		if($imgExtension != "jpg" && $imgExtension != "png" && $imgExtension != "jpeg" && $imgExtension != "gif" ) 
-		{
-			$imgError = "Les fichiers autorises sont: .jpg, .jpeg, .png, .gif";
-			$isUploadSuccess = false;
-		}
-		if(file_exists($imgPath)) 
-		{
-			$imgError = "Le fichier existe deja";
-			$isUploadSuccess = false;
-		}
-		if($_FILES["img"]["size"] > 500000) 
-		{
-			$imgError = "Le fichier ne doit pas depasser les 500KB";
-			$isUploadSuccess = false;
-		}
-		if($isUploadSuccess) 
-		{
-			if(!move_uploaded_file($_FILES["img"]["tmp_name"], $imgPath)) 
-			{
-				$imgError = "Il y a eu une erreur lors de l'upload";
-				$isUploadSuccess = false;
-			} 
-		} 
-	}
+    if(empty($img))
+    {
+        $imgError = 'Ce champ ne peut pas être vide';
+        $isSuccess = false;
+    }
+    else
+    {
+        $isUploadSuccess = true;
+        if($imgExtension != "jpg" && $imgExtension != "png" && $imgExtension != "jpeg" && $imgExtension != "gif" ) 
+        {
+            $imgError = "Les fichiers autorises sont: .jpg, .jpeg, .png, .gif";
+            $isUploadSuccess = false;
+        }
+        if(file_exists($imgPath)) 
+        {
+            $imgError = "Le fichier existe deja";
+            $isUploadSuccess = false;
+        }
+        if($_FILES["img"]["size"] > 500000) 
+        {
+            $imgError = "Le fichier ne doit pas depasser les 500KB";
+            $isUploadSuccess = false;
+        }
+        if($isUploadSuccess) 
+        {
+            if(!move_uploaded_file($_FILES["img"]["tmp_name"], $imgPath)) 
+            {
+                $imgError = "Il y a eu une erreur lors de l'upload";
+                $isUploadSuccess = false;
+            } 
+        } 
+    }
 /**/
 /*---------shop--------*/
-	if(empty($shop))
-	{
-		$shopError = 'Ce champ ne peut pas être vide';
-		$isSuccess = false;
-	}
+    if(empty($shop))
+    {
+        $shopError = 'Ce champ ne peut pas être vide';
+        $isSuccess = false;
+    }
     if(empty($tarif))
     {
         $tarifError = 'Ce champ ne peut pas être vide';
         $isSuccess = false;
     }
-	if($isSuccess && $isUploadSuccess) 
-	{
-		$db = Database::connect();
-		$statement = $db->prepare('INSERT INTO accessoires (name, category, os, marque, connexion, article, img, shop, tarif, date_ajout) values (?,?,?,?,?,?,?,?,?, NOW())');
-		$statement->execute(array($name, $category, $os, $marque, $connexion, $article, $img, $shop, $tarif));
-		Database::disconnect();
-		header('Location: ../pages/accessoire.php');
-	}
+    if($isSuccess && $isUploadSuccess) 
+    {
+        $db = Database::connect();
+        $statement = $db->prepare('INSERT INTO accessoires (name, category, os, marque, connexion, article, img, shop, tarif, date_ajout) values (?,?,?,?,?,?,?,?,?, NOW())');
+        $statement->execute(array($name, $category, $os, $marque, $connexion, $article, $img, $shop, $tarif));
+        Database::disconnect();
+        header('Location: ../pages/accessoire.php');
+    }
 }
-
 include("../inc/header.php") ;
 ?>
 
@@ -142,6 +140,12 @@ include("../inc/header.php") ;
                                     <input type="text" class="form-control" id="name" name="name" placeholder="Nom de l'accessoire" value="<?php echo $name;?>">
                                     <span class="help-inline"><?php echo $nameError;?></span>
                                 </div>
+            <!-- formulaire prix -->
+                                <div class="form-group">
+                                    <label for="tarif">Prix:</label>
+                                    <input type="number" min="1" max="10000" class="form-control" id="tarif" name="tarif" placeholder="20" value="<?php echo $tarif;?>">
+                                    <span class="help-inline"><?php echo $tarifError;?></span>
+                                </div>
             <!-- formulaire categorie-->
                                 <div class="form-group">
                                     <label for="category">Catégorie:</label>
@@ -157,6 +161,7 @@ include("../inc/header.php") ;
                                     </select>
                                     <span class="help-inline"><?php echo $categoryError;?></span>
                                 </div>
+
             <!-- formulaire os-->
                                 <div class="form-group">
                                     <label for="os">Compatibilité de l'OS:</label>
@@ -202,18 +207,19 @@ include("../inc/header.php") ;
                                     </select>
                                     <span class="help-inline"><?php echo $connexionError;?></span>
                                 </div>
-            
+            <!-- formulaire lien vers le site constructeur ou revendeur -->
+                                <div class="form-group">
+                                    <label for="shop">Lien constructeur ou revendeur</label>
+                                    <input type="text" class="form-control" id="shop" name="shop" placeholder="Lien vers le site constructeur ou revendeur" value="<?php echo $shop;?>">
+                                    <span class="help-inline"><?php echo $shopError;?></span>
+                                </div>
             <!-- formulaire Article ulysses-->               
                                <div class="form-group">
                                <p>Click <a href="#" class="add">this link to insert content</a> from anywhere in the page or <a href="#" class="toggle">this one to <span>remove markItUp!</span></a></p>
 
                                     <label for="article">Rédigez votre article:</label>
-<<<<<<< HEAD
-                                  <textarea type="text" cols="80" rows="10" class="form-control" id="article" name="article" placeholder="Rédigez votre article dans cet espace" value="<?php echo $article;?>"></textarea>
-=======
                                   <textarea id="markItUp" name="article" placeholder="Rédigez votre article dans cet espace" value="<?php echo $article;?>"></textarea>
-                                    <!--<input type="text" id="article" name="article" placeholder="Rédigez votre article dans cet espace" value="<?php echo $article;?>">-->
->>>>>>> markitup
+                                    
                                     <span class="help-inline"><?php echo $articleError;?></span>
                                 </div>
                                 
@@ -223,24 +229,7 @@ include("../inc/header.php") ;
                                     <input type="file" id="img" name="img"> 
                                     <span class="help-inline"><?php echo $imgError;?></span>
                                 </div>
-            <!-- formulaire lien vers le site constructeur ou revendeur -->
-                                <div class="form-group">
-                                    <label for="shop">Lien constructeur ou revendeur</label>
-                                    <input type="text" class="form-control" id="shop" name="shop" placeholder="Lien vers le site constructeur ou revendeur" value="<?php echo $shop;?>">
-                                    <span class="help-inline"><?php echo $shopError;?></span>
-                                </div>
-            <!-- formulaire prix -->
-                                <div class="form-group">
-                                    <label for="tarif">Prix:</label>
-                                    <input type="number" min="1" max="10000" class="form-control" id="tarif" name="tarif" placeholder="20" value="<?php echo $tarif;?>">
-                                    <span class="help-inline"><?php echo $tarifError;?></span>
-                                </div>
-            
-
-            
-            
-            
-								
+                                
                                 <br>
                                 <div class="form-actions">
                                     <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span> Ajouter</button>
@@ -258,11 +247,3 @@ include("../inc/header.php") ;
         </div> <!-- fin row -->
     </div><!-- fin container m50 -->
 </div><!-- fin #wrapper -->
-
-
-
-
-
-
-
-

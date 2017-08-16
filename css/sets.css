@@ -1,0 +1,86 @@
+/* -------------------------------------------------------------------
+// markItUp!
+// By Jay Salvat - http://markitup.jaysalvat.com/
+// ------------------------------------------------------------------*/
+.markItUp .markItUpButton1 a {
+	background-image:url(/macadit/img/set/bold.png);
+	background-color: #E75128;
+	border-radius: 3px;
+	width: 20px;
+	height: 20px;
+	margin: 2px;
+}
+.markItUp .markItUpButton2 a {
+	background-image:url(/macadit/img/set/italic.png);
+	background-color: #E75128;
+	border-radius: 3px;
+	width: 20px;
+	height: 20px;
+	margin: 2px;
+}
+.markItUp .markItUpButton3 a {
+	background-image:url(/macadit/img/set/stroke.png);
+	background-color: #E75128;
+	border-radius: 3px;
+	width: 20px;
+	height: 20px;
+	margin: 2px;
+}
+.markItUp .markItUpButton4 a {
+	background-image:url(/macadit/img/set/header-1.png);
+	background-color: #00A9C7;
+	border-radius: 3px;
+	width: 20px;
+	height: 20px;
+	margin: 2px;
+	
+}
+.markItUp .markItUpButton5 a {
+	background-image:url(/macadit/img/set/header-2.png);
+	background-color: #00A9C7;
+	border-radius: 3px;
+	width: 20px;
+	height: 20px;
+	margin: 2px;
+	
+}
+.markItUp .markItUpButton6 a {
+	background-image:url(/macadit/img/set/header-3.png);
+	background-color: #00A9C7;
+	border-radius: 3px;
+	width: 20px;
+	height: 20px;
+	margin: 2px;
+	
+}
+.markItUp .markItUpButton7 a {
+	background-image:url(/macadit/img/set/list-bullet.png); 
+	background-color: #00EF00;
+	border-radius: 3px;
+	width: 20px;
+	height: 20px;
+	margin: 2px;
+}
+.markItUp .markItUpButton8 a {
+	background-image:url(/macadit/img/set/list-numeric.png);
+	background-color: #00EF00;
+	border-radius: 3px;
+	width: 20px;
+	height: 20px;
+	margin: 2px;
+}
+
+.markItUp .markItUpButton9 a {
+	background-image:url(/macadit/img/set/picture.png); 
+	border-radius: 3px;
+	width: 20px;
+	height: 20px;
+	margin: 2px;
+}
+.markItUp .markItUpButton10 a {
+	background-image:url(/macadit/img/set/link.png);
+	border-radius: 3px;
+	width: 20px;
+	height: 20px;
+	margin: 2px;
+}

@@ -18,15 +18,12 @@
   <script type="text/javascript" src="/macadit/js/jquery.markitup.js"></script>
   <!-- markItUp! toolbar settings -->
   <script type="text/javascript" src="/macadit/js/set.js"></script>
-    <script type="text/javascript" src="/macadit/cleditor/jquery.cleditor.min.js"></script>
-     <link rel="stylesheet" type="text/css" href="/macadit/cleditor/jquery.cleditor.css" />
+    
 
      <!-- fonction  JQuery qui transforme le textarea en éditeur HTML -->
      <!--<script type="text/javascript" src="/macadit/js/cleditor.js"></script>-->
       <script type="text/javascript" src="/macadit/js/markitup.js"></script>
   <!--  -->
-  
-
   	<link href="https://fonts.googleapis.com/css?family=Bubbler+One" rel="stylesheet"> 
   	 <link href="https://fonts.googleapis.com/css?family=Holtwood+One+SC" rel="stylesheet"> 
      <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">

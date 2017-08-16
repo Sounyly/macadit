@@ -218,7 +218,7 @@ include("../inc/header.php") ;
             <!-- formulaire Article ulysses-->               
                                <div class="form-group">
                                     <label for="article">Rédigez votre article:</label>
-                                  <textarea id="markItUp" type="text" name="article" placeholder="Rédigez votre article dans cet espace" value="<?php echo $article;?>"></textarea>
+                                  <textarea type="text" cols="80" rows="10" name="article" placeholder="Rédigez votre article dans cet espace" value="<?php echo $article;?>"></textarea>
                                     <!--<input type="text" id="article" name="article" placeholder="Rédigez votre article dans cet espace" value="<?php echo $article;?>">-->
                                     <span class="help-inline"><?php echo $articleError;?></span>
                                 </div>

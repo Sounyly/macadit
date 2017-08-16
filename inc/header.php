@@ -14,7 +14,18 @@
    
   	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<<<<<<< HEAD
 
+=======
+     <script src="http://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+     
+    <script src="https://use.fontawesome.com/342ca52ed4.js"></script><!-- mon propre code font awesome -->
+  <!-- editeur de texte -->
+  <!-- markItUp! -->
+  <script type="text/javascript" src="/macadit/js/jquery.markitup.js"></script>
+  <!-- markItUp! toolbar settings -->
+  <script type="text/javascript" src="/macadit/js/set.js"></script>
+>>>>>>> markitup
     
 
     <script src="https://use.fontawesome.com/342ca52ed4.js"></script><!-- mon propre code font awesome -->

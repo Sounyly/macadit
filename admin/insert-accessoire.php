@@ -142,12 +142,6 @@ include("../inc/header.php") ;
                                     <input type="text" class="form-control" id="name" name="name" placeholder="Nom de l'accessoire" value="<?php echo $name;?>">
                                     <span class="help-inline"><?php echo $nameError;?></span>
                                 </div>
-            <!-- formulaire prix -->
-                                <div class="form-group">
-                                    <label for="tarif">Prix:</label>
-                                    <input type="number" min="1" max="10000" class="form-control" id="tarif" name="tarif" placeholder="20" value="<?php echo $tarif;?>">
-                                    <span class="help-inline"><?php echo $tarifError;?></span>
-                                </div>
             <!-- formulaire categorie-->
                                 <div class="form-group">
                                     <label for="category">Catégorie:</label>
@@ -163,7 +157,6 @@ include("../inc/header.php") ;
                                     </select>
                                     <span class="help-inline"><?php echo $categoryError;?></span>
                                 </div>
-
             <!-- formulaire os-->
                                 <div class="form-group">
                                     <label for="os">Compatibilité de l'OS:</label>
@@ -209,17 +202,11 @@ include("../inc/header.php") ;
                                     </select>
                                     <span class="help-inline"><?php echo $connexionError;?></span>
                                 </div>
-			<!-- formulaire lien vers le site constructeur ou revendeur -->
-                                <div class="form-group">
-                                    <label for="shop">Lien constructeur ou revendeur</label>
-                                    <input type="text" class="form-control" id="shop" name="shop" placeholder="Lien vers le site constructeur ou revendeur" value="<?php echo $shop;?>">
-                                    <span class="help-inline"><?php echo $shopError;?></span>
-                                </div>
+            
             <!-- formulaire Article ulysses-->               
                                <div class="form-group">
                                     <label for="article">Rédigez votre article:</label>
-                                  <textarea type="text" cols="80" rows="10" name="article" placeholder="Rédigez votre article dans cet espace" value="<?php echo $article;?>"></textarea>
-                                    <!--<input type="text" id="article" name="article" placeholder="Rédigez votre article dans cet espace" value="<?php echo $article;?>">-->
+                                  <textarea type="text" cols="80" rows="10" class="form-control" id="article" name="article" placeholder="Rédigez votre article dans cet espace" value="<?php echo $article;?>"></textarea>
                                     <span class="help-inline"><?php echo $articleError;?></span>
                                 </div>
                                 
@@ -227,8 +214,25 @@ include("../inc/header.php") ;
                                 <div class="form-group">
                                     <label for="img">Sélectionner une image:</label>
                                     <input type="file" id="img" name="img"> 
-                                    <span class="help-inline"><?php echo $imageError;?></span>
+                                    <span class="help-inline"><?php echo $imgError;?></span>
                                 </div>
+            <!-- formulaire lien vers le site constructeur ou revendeur -->
+                                <div class="form-group">
+                                    <label for="shop">Lien constructeur ou revendeur</label>
+                                    <input type="text" class="form-control" id="shop" name="shop" placeholder="Lien vers le site constructeur ou revendeur" value="<?php echo $shop;?>">
+                                    <span class="help-inline"><?php echo $shopError;?></span>
+                                </div>
+            <!-- formulaire prix -->
+                                <div class="form-group">
+                                    <label for="tarif">Prix:</label>
+                                    <input type="number" min="1" max="10000" class="form-control" id="tarif" name="tarif" placeholder="20" value="<?php echo $tarif;?>">
+                                    <span class="help-inline"><?php echo $tarifError;?></span>
+                                </div>
+            
+
+            
+            
+            
 								
                                 <br>
                                 <div class="form-actions">

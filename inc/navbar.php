@@ -1,5 +1,5 @@
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-<div class="container-fluid">
+  <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#maNavbar">
@@ -7,15 +7,15 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-              <a class="navbar-brand" href=""><img src="/macadit/img/logo 2.png" alt="Logo Mac a dit" class="logo-navbar"> </a>
+              <a class="navbar-brand" href=""><img src="/macadit/img/logo/logo.png" alt="Logo Mac a dit" class="logo-navbar"> </a>
         </div>
         <div class="collapse navbar-collapse" id="maNavbar">
               <ul class="nav navbar-nav">
                 <li><a href="/macadit/index.php" class="active">Accueil</a></li>
-                <li><a href="/macadit/tutos/debuter.php">Débuter</a></li>
+                <li><a href="/macadit/pages/debuter.php">Débuter</a></li>
                 <li><a href="#">Tutoriels</a></li>
-                <li><a href="/macadit/logiciels/logiciel.php">Logiciels</a></li>
-                <li><a href="/macadit/accessoires/accessoire.php">Accessoires</a></li>
+                <li><a href="/macadit/pages/logiciel.php">Logiciels</a></li>
+                <li><a href="/macadit/pages/accessoire.php">Accessoires</a></li>
                 <li><a href="#">IOS</a></li>
               </ul>
             <form class="navbar-form navbar-right">

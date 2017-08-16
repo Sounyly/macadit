@@ -109,7 +109,7 @@ if(!empty($_POST))
 		$statement = $db->prepare('INSERT INTO accessoires (name, category, os, marque, connexion, article, img, shop, tarif, date_ajout) values (?,?,?,?,?,?,?,?,?, NOW())');
 		$statement->execute(array($name, $category, $os, $marque, $connexion, $article, $img, $shop, $tarif));
 		Database::disconnect();
-		header('Location: ../accessoires/accessoire.php');
+		header('Location: ../pages/accessoire.php');
 	}
 }
 
@@ -125,11 +125,9 @@ include("../inc/header.php") ;
             <div class="row">
                 <div class=" col-md-12 col-lg-12 div-dessin-papillon">
 
-                    <aside class="circle-orange"></aside>
-                    <aside class="circle-vert"></aside>
+                  
                     <h3 class="text-aside-circle">Ajouter un accessoire</h3>
-                    <aside class="circle-bleu"></aside>
-                    <aside class="circle-jaune"></aside>
+                    
                 </div><!-- fin col -->
             </div><!-- fin row -->
             <div class="row">
@@ -220,7 +218,7 @@ include("../inc/header.php") ;
             <!-- formulaire Article ulysses-->               
                                <div class="form-group">
                                     <label for="article">Rédigez votre article:</label>
-                                  <textarea id="article" name="article" placeholder="Rédigez votre article dans cet espace" value="<?php echo $article;?>"></textarea>
+                                  <textarea id="markItUp" name="article" placeholder="Rédigez votre article dans cet espace" value="<?php echo $article;?>"></textarea>
                                     <!--<input type="text" id="article" name="article" placeholder="Rédigez votre article dans cet espace" value="<?php echo $article;?>">-->
                                     <span class="help-inline"><?php echo $articleError;?></span>
                                 </div>
@@ -235,7 +233,7 @@ include("../inc/header.php") ;
                                 <br>
                                 <div class="form-actions">
                                     <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span> Ajouter</button>
-                                    <a class="btn btn-primary" href="../accessoires/accessoire.php"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a>
+                                    <a class="btn btn-primary" href="../pages/accessoire.php"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a>
                                 </div>
                             </form>
                             <div class="col-lg-offset-2">

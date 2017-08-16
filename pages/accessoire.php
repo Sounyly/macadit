@@ -2,8 +2,22 @@
 require '../class/database.php';
 include("../inc/header.php") ;
 ?>
-<div class="container">
-<div>
+	<?php include '../inc/navbar.php'; ?>
+<div class="container-fluid color-header">
+	<div class="container">
+		<div class="row">
+				<div class="col-lg-12">
+				<img src="/macadit/img/logo/macky-logo.png" alt="Logo du robot Macky" class="logo-macky">
+				<h1 class="texte-header">Mac a dit!</h1>
+				</div>
+		</div>
+	</div>
+	</div>
+
+	
+	<div class="container" id ="page">
+		
+	
 	<?php 
 	$db = Database::connect();
 	$statement = $db->query('
@@ -50,3 +64,4 @@ include("../inc/header.php") ;
 <br><br><br><br>
 
 </div>
+<?php include '../inc/footer.php'; ?><!-- fin container fluid dans footer -->

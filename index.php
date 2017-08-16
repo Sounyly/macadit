@@ -3,21 +3,21 @@ require 'class/database.php';
 require 'func/checkInput.php';
 include 'inc/header.php'; ?>
 
+<?php include 'inc/navbar.php'; ?>
+<div class="container-fluid header">
+	
+		<header >
+			<div class="row">
+				<div class="col-lg-12">
+					<img src="/macadit/img/logo/macky-logo.png" alt="Logo du robot Macky" class="logo-macky border">
+					<h1 class="texte-header border">Mac a dit!</h1>
+				</div>
+			</div><!-- fin row -->
+		</header>
+	
 
-<div class="container-fluid">
-	<?php include 'inc/navbar.php'; ?>
-
-	<div class="row header">
-	<div class="container">
-			<div class="col-lg-12">
-			<h1 class="texte-header">Mac a dit!</h1>
-				<br>
-				<p class="p-header">Le site des passionnés et des futurs passionnés d'Apple!</p>
-			</div>
-			</div>
-			
-		</div><!-- fin row -->
-
+	
+</div>
 	
 	<div class="container" id ="page">
 		

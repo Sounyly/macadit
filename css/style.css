@@ -72,35 +72,43 @@ body
 		padding: 20px;
 		text-align: justify;
 	}
-	.header
+	.container-fluid.header
 	{
-		display: flex;
-		align-items: center;
-		height: 255px;
+		
+		height: 260px;
 		margin-top: 50px;	
-		justify-content: center;
 		background: #00A9C7;
+	
 	}
-	.header>.container>.col-lg-12
+	header
 	{
 		display: flex;
-		align-items:  center;
-		justify-content: space-around;
+		flex-direction: row;
+		justify-content: center;
+		border: 2px blue solid;
+		margin: auto;
+		height: 260px;
+		
 	}
+	
 	h1.texte-header
 	{
 		
 		font-size: 40px;
 		color: #E5E5E5;
 		font-family: 'Holtwood One SC', serif;
-		width: 80%;
+		width: 60%;
 		text-align: center;
+		
+		
+
 
 	}
 	img.logo-macky
 	{
 		display: inline-block;
-		width: 17%;
+		width: 10%;
+
 	}
 	aside.aside-principal
 	{

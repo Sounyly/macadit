@@ -229,7 +229,7 @@ include("../inc/header.php") ;
                                 <div class="form-group">
                                     <label for="img">Sélectionner une image:</label>
                                     <input type="file" id="img" name="img"> 
-                                    <span class="help-inline"><?php echo $imageError;?></span>
+                                    <span class="help-inline"><?php echo $imgError;?></span>
                                 </div>
 								
                                 <br>
